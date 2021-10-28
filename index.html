@@ -129,6 +129,20 @@ panelists:
   - Ivan Gayton
   - Hilmon Sorey
   - Cory Bray
+
+contributors:
+- name: Casey Pugh
+  url: https://github.com/caseypugh
+- name: Tieg Zaharia
+  url: https://github.com/tiegz
+- name: Nagesh
+  url: https://github.com/bansalnagesh
+- name: Ryan Hefner
+  url: https://github.com/ryanhefner
+- name: Orlando Lee
+  url: https://github.com/OrlandoLee
+- name: Lisa Huynh
+  url: https://github.com/lisaah
 ---
 
 <div class="hero">
@@ -256,6 +270,25 @@ panelists:
         {% endfor %}
       </div>
     </div>
+
+    <hr class="my-8" />
+
+    <div>
+      <div class="font-bold mb-4">
+        Contributors to <a href="https://github.com/covid-volunteers">HelpWithCovid.com</a>
+      </div>
+
+      <div class="grid grid-cols-1 grid-cols-2 gap-1">
+        {% for contributor in page.contributors %}
+        {% if contributor.url %}
+        <a class="text-indigo-600" href="{{contributor.url}}" target="_blank" class="block">{{contributor.name}}</a>
+        {% else %}
+        <div>{{contributor.name}}</div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
 
     <div>
       <div class="text-center font-bold mt-16 mb-32">Thank you so much!</div>
